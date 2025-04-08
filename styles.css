@@ -12,14 +12,13 @@ img {
 /* Page styling */
 body {
     background: #F4FFE4;
-    /* background-color: #333;
-    color: rgb(235, 235, 235);
-    transition: all 2s; */
+    transition: all 2s; 
 }
 
 body.switch {
-    /* background-color: rgb(235, 235, 235);
-    color: #333; */
+    background-color: #000;
+    transition: all 2s;
+    color:aliceblue;
 }
 
 #container {
@@ -48,6 +47,12 @@ header h2{
     font-weight: 400;
     line-height: normal;
     /* margin-right: auto; */
+}
+
+
+h2.switch{
+    color:#FFFFFF;
+
 }
 
 #banner {
@@ -125,11 +130,6 @@ a {
     text-decoration: none;
 }
 
-a:hover{
-    /* text-decoration: underline; */
-    /* border-bottom: #ed6969 5px solid; */
-}
-
 section a {
     line-height: 1.1em;
     display: inline-block;
@@ -156,39 +156,20 @@ section li {
 
 section a:hover {
     background-color: rgb(254, 151, 206);
-    color: #333;
+    color: #000000;
 }
 
 section.switch a {
-    color: #333;
+    color: #ffffff;
 }
 
 section.switch a:hover {
-    background-color: #333;
+    background-color: #FF57B4;
     color: rgb(235, 235, 235);
 }
 
-button {
+#switch{
     position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 12px;
-    background-color: orange;
-    color: #333;
-    border: 1px solid transparent;
-}
-
-button:hover {
-    background-color: coral;
-    cursor: pointer;
-}
-
-button.switch {
-    background-color: rgb(235, 235, 235);
-    border-color: #333;
-}
-
-button.switch:hover {
-    background-color: #333;
-    color: rgb(235, 235, 235)
+    top:0;
+    right:10%;
 }
