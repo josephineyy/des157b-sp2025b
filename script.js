@@ -9,13 +9,7 @@
     const h2 = document.querySelector('h2')
     let mode = 'light';
 
-    const title = document.getElementById('title');
-    // title.addEventListener('mouseenter', () => {
-    // title.src = 'images/Banner2.png';
-    // });
-    // title.addEventListener('mouseleave', () => {
-    //     title.src = 'images/Banner1.png';
-    // });
+    const switchButton = document.getElementById('switch');
 
     for(let i=0; i<cats.length;i++){
         cats[i].addEventListener('mouseover',function(){
@@ -40,8 +34,8 @@
             for (const section of sections) {
                 section.className = 'switch';
             }
-            title.src = 'images/Banner1.png';
             mode = 'dark';
+            switchButton.src='images/switch2.png'
 
         } else {
             body.removeAttribute('class');
@@ -51,8 +45,8 @@
             for (const section of sections) {
                 section.removeAttribute('class');
             }
-            title.src = 'images/Banner1.png';
             mode = 'light'
+            switchButton.src='images/swith.png'
         }
     })
 })()
