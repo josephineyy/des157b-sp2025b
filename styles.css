@@ -1,0 +1,194 @@
+/* CSS Resets */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* Page styling */
+body {
+    background: #F4FFE4;
+    /* background-color: #333;
+    color: rgb(235, 235, 235);
+    transition: all 2s; */
+}
+
+body.switch {
+    /* background-color: rgb(235, 235, 235);
+    color: #333; */
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+    /* make sure the columns don't get too small and text stays readable */
+    min-width: 900px;
+    margin: 1em auto;
+    padding-top: 2em;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header h2{
+    padding: 0;
+    margin:0;
+    color: #BE3882;
+    font-family: "Jolly Lodger";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* margin-right: auto; */
+}
+
+#banner {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+
+#banner img {
+    animation: jump 2s ease-in-out infinite;
+}
+
+#banner img:nth-child(1) { animation-delay: 0s; }
+#banner img:nth-child(2) { animation-delay: 0.25s; }
+#banner img:nth-child(3) { animation-delay: 0.5s; }
+#banner img:nth-child(4) { animation-delay: 0.75s; }
+#banner img:nth-child(5) { animation-delay: 1s; }
+#banner img:nth-child(6) { animation-delay: 1.25s; }
+#banner img:nth-child(7) { animation-delay: 1.5s; }
+#banner img:nth-child(8) { animation-delay: 1.75s; }
+#banner img:nth-child(9) { animation-delay: 2s; }
+#banner img:nth-child(10) { animation-delay: 2.25s; }
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+#banner.switch {
+    background-color: #333;
+    color: rgb(235, 235, 235);
+    transition: all 2s;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap:40px;
+    margin: 1em auto;
+
+}
+
+main section {
+    width: 250px;
+    border-bottom: 8px solid #B81A72;
+    border-left: 8px solid #B81A72;
+    position: relative;
+    left: -20px;
+}
+
+section section{
+  
+    width: 250px;
+    height: 99%;
+    border-bottom: 5px solid #FE55B3;
+    border-left: 5px solid #FE55B3;   
+}
+main section h3{
+    color: #FF57B4;
+    font-family: "Jolly Lodger";
+    font-size: 48px;
+    font-weight: 200;
+    margin:0 auto;
+    text-align: center;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover{
+    /* text-decoration: underline; */
+    /* border-bottom: #ed6969 5px solid; */
+}
+
+section a {
+    line-height: 1.1em;
+    display: inline-block;
+    color: #000;
+    font-family: "Jersey 20";
+    font-size: 24px;
+    font-weight: 100;
+    
+    text-align: center;
+}
+
+nav ol, nav ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+section li {
+    padding-left: 1.2em;
+    text-align: center;
+    padding: 5px 0;
+}
+
+
+section a:hover {
+    background-color: rgb(254, 151, 206);
+    color: #333;
+}
+
+section.switch a {
+    color: #333;
+}
+
+section.switch a:hover {
+    background-color: #333;
+    color: rgb(235, 235, 235);
+}
+
+button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 12px;
+    background-color: orange;
+    color: #333;
+    border: 1px solid transparent;
+}
+
+button:hover {
+    background-color: coral;
+    cursor: pointer;
+}
+
+button.switch {
+    background-color: rgb(235, 235, 235);
+    border-color: #333;
+}
+
+button.switch:hover {
+    background-color: #333;
+    color: rgb(235, 235, 235)
+}
