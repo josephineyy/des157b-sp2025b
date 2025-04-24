@@ -1,0 +1,86 @@
+{
+  "Mix Ingredients": {
+    "time": "10:00 AM",
+    "action": "Combine water, sugar, yeast — let foam",
+    "ingredients_added": ["160ml warm water", "5g sugar", "5g instant yeast"],
+    "temperature": "22°C",
+    "dough_status": "Yeast mixture became frothy after 5 minutes"
+  },
+  "Form Dough": {
+    "time": "10:10 AM",
+    "action": "Add flour and salt, mix to form rough dough",
+    "ingredients_added": ["250g flour", "5g salt"],
+    "temperature": "22°C",
+    "dough_status": "Rough, slightly sticky"
+  },
+  "Knead Dough": {
+    "time": "10:12 AM",
+    "action": "Knead by hand for 12 minutes, add butter at 8 mins",
+    "ingredients_added": ["15g softened butter"],
+    "temperature": "22°C",
+    "dough_status": "Smooth, elastic, slightly tacky"
+  },
+  "Rest": {
+    "time": "10:25 AM",
+    "action": "Rest covered dough for 15 minutes",
+    "ingredients_added": [],
+    "temperature": "22°C",
+    "dough_status": "Surface soft and slightly moist, relaxed structure"
+  },
+  "First Proof": {
+    "time": "10:40 AM to 11:25 AM",
+    "action": "Let rise until doubled",
+    "ingredients_added": [],
+    "temperature": "22°C",
+    "dough_status": "Doubled in size, airy and soft"
+  },
+  "Punch Down and Shape": {
+    "time": "11:25 AM",
+    "action": "Deflate and shape into loaf",
+    "ingredients_added": [],
+    "temperature": "22°C",
+    "dough_status": "Smooth, pliable, not sticky"
+  },
+  "Second Rest": {
+    "time": "11:30 AM",
+    "action": "Rest shaped dough for 10 minutes before final proof",
+    "ingredients_added": [],
+    "temperature": "22°C",
+    "dough_status": "Elastic with slight bounce"
+  },
+  "Second Proof": {
+    "time": "11:40 AM to 12:10 PM",
+    "action": "Let rise again in pan",
+    "ingredients_added": [],
+    "temperature": "22°C",
+    "dough_status": "Visibly risen, surface springy"
+  },
+  "Bake": {
+    "time": "12:10 PM to 12:38 PM",
+    "action": "Bake at 190°C (375°F) for 28 minutes",
+    "ingredients_added": [],
+    "temperature": "Oven: 190°C",
+    "dough_status": "Golden brown, hollow sound when tapped"
+  },
+  "Cool": {
+    "time": "12:40 PM",
+    "action": "Cool loaf on wire rack",
+    "ingredients_added": [],
+    "temperature": "22°C",
+    "dough_status": "Crackling crust sound, aroma developed"
+  },
+  "Slice": {
+    "time": "1:10 PM",
+    "action": "Cut into 7 slices",
+    "ingredients_added": [],
+    "temperature": "22°C",
+    "dough_status": "Even crumb, soft interior"
+  },
+  "Toast": {
+    "time": "1:15 PM",
+    "action": "Toast one slice on medium-dark setting",
+    "ingredients_added": [],
+    "temperature": "N/A",
+    "dough_status": "Crispy edges, soft center, caramel aroma"
+  }
+}
