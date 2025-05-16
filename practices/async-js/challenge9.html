@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Challenge 9</title>
+    <link href="spinner.css" rel="stylesheet">
+    <style>
+        #affimation {
+            background-color: aliceblue;
+            padding: 20px;
+            text-align: center;
+            min-height: 100px;
+            position: relative;
+        }
+        #theform {
+            margin-bottom: 20px;
+        }
+        footer {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Async Challenge 9</h1>
+    <p>The result of this challenge should show up in the div below</p>
+    <form id="theform">
+        <label for="yourname">Tell Me Your Name</label>
+        <input type="text" name="name" id="yourname">
+        <input type="submit" value="Get Affirmation">
+    </form>
+    <div id="affirmation"></div>
+
+    <script>
+        document.querySelector('#theform').addEventListener('submit', getData);
+        async function getData(event){
+            // Prevent the default form submission here
+            // add the rest of the script here...
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hover Lamp Glow</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+<script>
+  let scene = new THREE.Scene();
+  let camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+  let renderer = new THREE.WebGLRenderer({antialias: true});
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+
+  // Light
+  let ambient = new THREE.AmbientLight(0xffffff, 0.4);
+  scene.add(ambient);
+
+  let pointLight = new THREE.PointLight(0xffffff, 1);
+  pointLight.position.set(10, 10, 10);
+  scene.add(pointLight);
+
+  // Lamp sphere
+  let geometry = new THREE.SphereGeometry(1, 32, 32);
+  let material = new THREE.MeshStandardMaterial({
+    color: 0xffffcc,
+    emissive: 0x000000
+  });
+  let lamp = new THREE.Mesh(geometry, material);
+  scene.add(lamp);
+
+  camera.position.z = 5;
+
+  // Raycaster setup
+  let raycaster = new THREE.Raycaster();
+  let mouse = new THREE.Vector2();
+
+  window.addEventListener('mousemove', function(event) {
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+  });
+
+  function animate() {
+    requestAnimationFrame(animate);
+    raycaster.setFromCamera(mouse, camera);
+    let intersects = raycaster.intersectObject(lamp);
+
+    if (intersects.length > 0) {
+      lamp.material.emissive.setHex(0xffff66);
+    } else {
+      lamp.material.emissive.setHex(0x000000);
+    }
+
+    renderer.render(scene, camera);
+  }
+
+  animate();
+
+  window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+</script>
+</body>
+</html>

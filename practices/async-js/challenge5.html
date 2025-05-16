@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Challenge 5</title>
+    <link href="spinner.css" rel="stylesheet">
+    <style>
+        #quote {
+            background-color: aliceblue;
+            padding: 20px;
+            text-align: center;
+            min-height: 100px;
+            position: relative;
+        }
+        footer {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Async Challenge 5</h1>
+    <p>The result of this challenge should show up in the div below</p>
+    <div id="quote">
+        
+    </div>
+
+    <script>
+       
+        // add your script here...
+        async function getData(){ 
+            document.querySelector('#quote').innerHTML = '<div class="loading-dot"></div>'
+            const theData = await fetch('https://meadpoint.net/remotedata/message-data2.php')
+            const content = await theData.json();
+            document.querySelector('#quote').innerHTML=outputContent(content)
+        }
+
+        function outputContent(content){
+            const html=`<blockquote>${content.quote}<footer>&mdash;${content.attribution}</footer></blockquote>`
+            return html
+        }
+        getData();
+    </script>
+</body>
+</html>
