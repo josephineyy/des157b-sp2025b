@@ -13,7 +13,7 @@
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 1000
+    radius: 800
     }).addTo(map);
     var polygon = L.polygon([
     [38.487611, -121.351168],
