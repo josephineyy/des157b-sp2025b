@@ -1,0 +1,32 @@
+
+    body {
+      margin: 0;
+      background-color: black;
+      font-family: 'Orbitron', sans-serif;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+    }
+    h1 {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      text-align: center;
+      color: #ffeb3b;
+      font-size: 2rem;
+      text-shadow: 0 0 10px #ffeb3b;
+      z-index: 10;
+    }
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 0.9rem;
+      z-index: 10;
+    }
+    a{
+      color:white
+    }
