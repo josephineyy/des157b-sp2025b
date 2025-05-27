@@ -1,0 +1,64 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background: black;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+#stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  z-index: 1;
+}
+
+#center-fire {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.fire {
+  width: 40px;
+  height: 60px;
+  background: radial-gradient(circle at 50% 30%, orange, red, black);
+  border-radius: 50% 50% 40% 40%;
+  box-shadow: 0 0 20px 10px orange;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: box-shadow 0.3s ease;
+}
+
+.circle {
+  border: 2px solid orange;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.2;
+  transition: transform 0.3s ease;
+}
+
+.circle1 {
+  width: 100px;
+  height: 100px;
+}
+
+.circle2 {
+  width: 160px;
+  height: 160px;
+}
+
+.circle3 {
+  width: 220px;
+  height: 220px;
+}
