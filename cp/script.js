@@ -24,6 +24,7 @@ const stages = [
     textY: -80,
     textOpacity: 0
   }
+  
 ];
 
 let currentStage = 0;

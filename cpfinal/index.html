@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Light is Pollution</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="hero-wrapper" id="heroWrapper">
+    <div class="stars" id="stars"></div>
+    <div class="hero">
+      <div class="hero-text" id="heroText">
+        <h1 class="title">Light is Pollution</h1>
+        <p class="sub">Scroll to see the truth beneath light</p>
+        <p class="sub">We lit every building. We lost every star.</p>
+      </div>
+      <img class="city" id="cityImage" src="img/dark.png" alt="City skyline" />
+    </div>
+  </div>
+
+  <div class="chat-section" id="chatSection">
+    <div class="chat-message from-future">Hey... are you seeing this?</div>
+    <div class="chat-message from-user">Yes. The sky’s almost gone.</div>
+    <div class="chat-message from-future">We thought we needed light everywhere.</div>
+    <div class="chat-message from-user">But now even the stars are data we stream.</div>
+    <div class="chat-message from-future">Would you turn off a light to bring back the dark?</div>
+    <div class="chat-message from-user">Maybe the dark is where we rediscover silence.</div>
+    <div class="chat-message from-future">And the stars might teach us how to listen again.</div>
+    <div class="chat-message from-user">We used to say 'reach for the stars' — now we simulate them.</div>
+    <div class="chat-message from-future">In the future, night is a choice, not a given.</div>
+    <button class="continue-button" onclick="scrollToMap()">Continue</button>
+  </div>
+
+  <div id="starAlliance">
+    <h2 style="text-align:center; font-size:2rem;">Join the Star Alliance</h2>
+    <div style="text-align:center; margin:1rem 0;">
+      <input type="text" id="locationInput" placeholder="Enter your city or region">
+      <button id="joinButton" onclick="addStar()">Join</button>
+    </div>
+    <div id="map"></div>
+  </div>
+</body>
+</html>
